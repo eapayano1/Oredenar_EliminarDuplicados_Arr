@@ -5,3 +5,13 @@ def Sort_Array(arr):
             if arr[x]>arr[x+1]:##Se intercambian los valores del elemento en el que nos encontramos con el elemento siguiente si el elemento en el que nos encontramos es mayor.
                 arr[x],arr[x+1]=arr[x+1],arr[x]
     return arr
+
+def EliminateDuplicates(arr):
+    longitud=len(arr)
+    myarr=[]
+    Sort_Array(arr)
+    for i in range(longitud-1):
+        if arr[i]!=arr[i+1]:##Se añade el ultimo elemento antes del cambio de la sucesion o arreglo
+            myarr.append(arr[i])
+    myarr.append(arr[longitud-1])
+    return myarr
