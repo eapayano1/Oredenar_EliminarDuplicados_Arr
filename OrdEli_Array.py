@@ -11,7 +11,7 @@ def EliminateDuplicates(arr):
     myarr=[]
     Sort_Array(arr)
     for i in range(longitud-1):
-        if arr[i]!=arr[i+1]:
+        if arr[i]!=arr[i+1]:## Elimina los elementos duplicados apartir de comprobar que se haya visto un elemento diferente.
             myarr.append(arr[i])
     myarr.append(arr[longitud-1])
     return myarr
